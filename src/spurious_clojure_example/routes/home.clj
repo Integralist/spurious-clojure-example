@@ -5,7 +5,6 @@
 
 (if (System/getenv "DEBUG")
   (do
-    (require '[spurious-aws-sdk-helper.utils :refer [credentials]])
     (require '[spurious-aws-sdk-helper.core :as core])
     (core/configure
       {:s3  "a"}
