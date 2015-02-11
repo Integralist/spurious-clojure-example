@@ -1,0 +1,15 @@
+table-name: foobar
+key-schema:
+- attribute-name: component_key
+  key-type: HASH
+- attribute-name: batch_version
+  key-type: RANGE
+attribute-definitions:
+- attribute-name: component_key
+  attribute-type: S
+- attribute-name: batch_version
+  attribute-type: N
+provisioned-throughput:
+  read-capacity-units: 10
+  write-capacity-units: 10
+

@@ -1,0 +1,8 @@
+(if true "a" "b")
+(if false "a" "b")
+(if true (do (prn "a") (prn "b")) "c")
+(if false (do (prn "a") (prn "b")) "c")
+(prn    "aa")
+(if-let [name "mark"] (prn name))
+(if-let [name ""] (prn name))
+(if-let [name false] (prn name))
