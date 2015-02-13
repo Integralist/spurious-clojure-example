@@ -6,3 +6,4 @@
 (if-let [name "mark"] (prn name))
 (if-let [name ""] (prn name))
 (if-let [name false] (prn name))
+exit
