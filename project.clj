@@ -6,7 +6,8 @@
                  [hiccup "1.0.5"]
                  [ring-server "0.3.1"]
                  [amazonica "0.3.13"]
-                 [environ "1.0.0"]]
+                 [environ "1.0.0"]
+                 [spurious-aws-sdk-helper "0.1.0"]]
   :plugins [[lein-ring "0.8.12"]
             [lein-environ "1.0.0"]]
   :ring {:handler spurious-clojure-example.handler/app
@@ -19,5 +20,4 @@
     {:open-browser? false, :stacktraces? false, :auto-reload? false}}
    :dev
    {:dependencies [[ring-mock "0.1.5"]
-                   [ring/ring-devel "1.3.1"]
-                   [spurious-aws-sdk-helper "0.1.0"]]}})
+                   [ring/ring-devel "1.3.1"]]}})
