@@ -4,13 +4,13 @@
             [environ.core :refer [env]]
             [spurious-clojure-example.views.layout :as layout]))
 
-(if (env :debug)
-  (do
-    (require '[spurious-aws-sdk-helper.core :as core])
-    (require '[spurious-aws-sdk-helper.utils :refer [endpoint cred]])
-    (core/configure {:s3  "test-bucket4"
-                     :sqs "test-queue4"
-                     :ddb (slurp "./resources/config/schema.yaml")})))
+(when (env :debug)
+  (require '[spurious-aws-sdk-helper.core :as core])
+  (require '[spurious-aws-sdk-helper.utils :refer [endpoint cred]])
+  ((ns-resolve core 'configure)
+   {:s3 "test-bucket7"
+    :sqs "test-queue9"
+    :ddb (slurp "./resources/config/schema.yaml")}))
 
 (def bucket-path "news-archive/dev/election2014-council_title")
 
