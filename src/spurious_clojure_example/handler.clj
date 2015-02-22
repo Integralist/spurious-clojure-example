@@ -5,7 +5,8 @@
             [hiccup.middleware :refer [wrap-base-url]]
             [compojure.handler :as handler]
             [compojure.route :as route]
-            [spurious-clojure-example.routes.home :refer [home-routes]]))
+            [spurious-clojure-example.routes.home :refer [home-routes]]
+            [spurious-clojure-example.routes.custom :refer [custom-routes]]))
 
 (defn init []
   (println "spurious-clojure-example is starting"))
@@ -18,6 +19,6 @@
   (route/not-found "Not Found"))
 
 (def app
-  (-> (routes home-routes app-routes)
+  (-> (routes home-routes custom-routes app-routes)
       (handler/site)
       (wrap-base-url)))
