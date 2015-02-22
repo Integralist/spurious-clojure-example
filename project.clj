@@ -7,7 +7,7 @@
                  [ring-server "0.3.1"]
                  [amazonica "0.3.18"]
                  [environ "1.0.0"]
-                 [spurious-aws-sdk-helper "0.1.0"]]
+                 [spurious-aws-sdk-helper "0.2.0"]]
   :plugins [[lein-ring "0.8.12"]
             [lein-environ "1.0.0"]]
   :main ^:skip-aot spurious-clojure-example.repl
